@@ -13,7 +13,7 @@ def game_function(data):
     fight()
     
     #reproduction/update phase
-    individual, neighbor = update.update_rule_birth_death()
+    individual, neighbor = update.update_rule()
     if(individual != None and individual.poke_type != neighbor.poke_type):
       setup.update_subplot(individual.grid_id,neighbor.grid_id)
       
