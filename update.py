@@ -4,7 +4,7 @@ import random
 
 #Your Implementation of Update Rules goes here
 
-def update_rule_birth_death():
+def update_rule():
 #select individual and neighbor and return them. If no one shall be updated return None
     individual = select_individual()
     neighbor = None
