@@ -99,7 +99,7 @@ def init():
 def update_subplot(substitute, former):
 #the pokemon with index substitute reproduces and his offspring replaces the pokemon with index former
     ax_list[former].clear()
-    poke_list[substitute].fitness -=6
+    poke_list[substitute].fitness = BREEDING_FITNESS
     poke_list[former].fitness = NEWBORN_FITNESS
     poke_list[former].matrix_id = poke_list[substitute].matrix_id
     poke_list[former].poke_type = poke_list[substitute].poke_type
