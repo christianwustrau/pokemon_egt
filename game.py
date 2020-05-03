@@ -19,11 +19,11 @@ def game_function(data):
     if(individual != None and individual.poke_type != neighbor.poke_type):
       setup.update_subplot(individual.grid_id,neighbor.grid_id)
     #prints population each turn in the terminal with id, type and fitness of each pokemon
-    #print_output(setup.poke_list)
+    #print_output()
 
 def fight():
      counter = 0
-     while(counter < setup.columns*setup.rows/2):
+     while(counter < int(np.sqrt(setup.columns*setup.rows))):
          r = random.randint(0,len(setup.poke_list)-1)
          if(setup.poke_list[r].status == setup.STATUS_ACTIVE):
              neighbors = update.get_neighbors(setup.poke_list[r])
@@ -57,7 +57,7 @@ def check_game_status():
         return False
     return True
 
-def print_output(poke_list):
+def print_output():
     for i in range(setup.rows):
         row = []
         for j in range(setup.columns):
